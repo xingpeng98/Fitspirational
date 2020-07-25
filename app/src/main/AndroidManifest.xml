@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.testapp.fitspirational">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <receiver
+            android:name=".FeatureActivities.RunTracker.MyLocationService"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity
+            android:name=".FeatureActivities.RunTracker.RunTracker2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavigationBarActivities.Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeatureActivities.CalorieTracker.CalorieCalculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeatureActivities.CalorieTracker.CalorieHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeatureActivities.CalorieTracker.CalorieMainPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeatureActivities.Diet.Diet"
+            android:label="@string/title_activity_diet"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- Diet -->
+        <activity
+            android:name=".NavigationBarActivities.Credits"
+            android:screenOrientation="portrait" /> <!-- Credits -->
+        <activity
+            android:name=".NavigationBarActivities.ChangePassword"
+            android:screenOrientation="portrait" /> <!-- ChangePassword -->
+        <activity
+            android:name=".NavigationBarActivities.EditProfile"
+            android:screenOrientation="portrait" /> <!-- EditProfile -->
+        <activity
+            android:name=".NavigationBarActivities.UserProfile"
+            android:screenOrientation="portrait" /> <!-- UserProfile -->
+        <activity
+            android:name=".StartActivities.UserInfo"
+            android:screenOrientation="portrait" /> <!-- UserInfo -->
+        <activity
+            android:name=".FeatureActivities.Breathe.Breathe"
+            android:screenOrientation="portrait" /> <!-- Breathe -->
+        <activity android:name=".FeatureActivities.Fitness.WebView" />
+        <activity
+            android:name=".FeatureActivities.RunTracker.RunImageDisplay"
+            android:screenOrientation="portrait" /> <!-- RunImageDisplay -->
+        <activity
+            android:name=".FeatureActivities.RunTracker.RunHistory"
+            android:screenOrientation="portrait" /> <!-- RunHistory -->
+        <activity
+            android:name=".FeatureActivities.RunTracker.ScreenshotActivity"
+            android:screenOrientation="portrait" /> <!-- ScreenshotActivity -->
+        <!-- RunTracker -->
+        <activity
+            android:name=".FeatureActivities.RunTracker.RunMainPage"
+            android:screenOrientation="portrait" /> <!-- RunMainPage -->
+        <activity
+            android:name=".FeatureActivities.Fitness.GeneralFitness"
+            android:screenOrientation="portrait" /> <!-- GeneralFitness -->
+        <activity
+            android:name=".StartActivities.OpenApp"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- OpenApp -->
+        <activity
+            android:name=".StartActivities.Register"
+            android:screenOrientation="portrait" /> <!-- Register -->
+        <activity
+            android:name=".StartActivities.Login"
+            android:screenOrientation="portrait" /> <!-- Login -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- MainActivity -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

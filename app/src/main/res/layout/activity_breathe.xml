@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".FeatureActivities.Breathe.Breathe">
+    
+    <ImageView
+        android:id="@+id/breathe_image"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/lotus"/>
+
+    <TextView
+        android:id="@+id/breathe_breatheText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/breathe_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="serif"
+        android:text="Breathe"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/breathe_startBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="#48D1CC	"
+        android:text="Start"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/breathe_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:text="7 cycles"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Fitspirational</string>
+    <string name="access_token">pk.eyJ1IjoieGluZ3BlbmciLCJhIjoiY2thOWk2bnBpMGNwazMybXByeHkyYmF3aiJ9.Pyt5dTo1CLVFlogPLk_lIg</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="credits_gratitude_text">
+        We would like to express our sincere gratitude towards those who have help us in the journey of producing
+        this application.\n\nWe would also like to credit the sources that we have used in the making of this application.
+    </string>
+
+    <string name="credits_fitnessArticle_text">
+        The fitness related articles in the dashboard belong to <b>bornfitness.com</b>. Our application does not own
+        nor profit from displaying and providing access to their articles. \n\nOur purpose is to expose the
+        users to more health and fitness related information so as to help users pursuit a healthy lifestyle.
+        Our application only provides an easy way to access these information.
+    </string>
+
+    <string name="credits_dietArticle_text">
+        The introduction to the four diets available belong to <b>www.healthline.com</b>. \n\nThe other
+        articles belong to <b>www.livestrong.com</b> \n\nOur application does not own nor profit from
+        displaying and providing access to their articles. \n\nThe purpose is to introduce users to
+        various diets that are healthy and can help in cutting weight.
+    </string>
+
+    <string name="credits_icons_text">
+        Icons made by Freepik (<i><u>https://www.flaticon.com/authors/freepik</u></i>) from <i><u>www.flaticon.com</u></i> \n\n
+        Icons made by Smashicons (<i><u>https://smashicons.com/" title="Smashicons</u></i>) from <i><u>www.flaticon.com</u></i> \n\n
+        Icons made by photo3idea_studio (<i><u>https://www.flaticon.com/free-icon/running_1108721</u></i>) from <i><u>www.flaticon.com</u></i> \n\n
+        Icons made by Pixel perfect (<i><u>https://www.flaticon.com/authors/pixel-perfect</u></i>) from <i><u>www.flaticon.com</u></i> \n\n
+        Icons made by smalllikeart (<i><u>https://www.flaticon.com/authors/smalllikeart</u></i>) from <i><u>www.flaticon.com</u></i> \n\n
+        Polygon PNG Designed By 乌拉拉 from Pngtree.com (<u><i>https://pngtree.com/</i></u>)
+    </string>
+
+    <string-array name="activityLevels">
+        <item>Little to no exercise</item>
+        <item>Light exercise (1–3 days per week)</item>
+        <item>Moderate exercise (3–5 days per week)</item>
+        <item>Heavy exercise (6–7 days per week)</item>
+        <item>Very heavy exercise (twice per day, extra heavy workouts)</item>
+    </string-array>
+
+    <string-array name="appActivities">
+        <item>Breathe</item>
+        <item>Calorie Tracker</item>
+        <item>Credits</item>
+        <item>Diet</item>
+        <item>Run</item>
+        <item>Run Tracker Main Page</item>
+        <item>Run History</item>
+        <item>Settings</item>
+        <item>User Profile</item>
+    </string-array>
+
+    <!-- Chronometer -->
+    <string name="RunEnded">Run Ended</string>
+    <string name="EndRun">End Run</string>
+    <string name="user_location_permission_not_granted">This feature needs your device location to function</string>
+    <string name="user_location_permission_explanation">This feature needs your device location to function</string>
+    <string name="new_location">New lat: %1$s New longitude: %2$s</string>
+
+
+    <string name="title_activity_diet">Diet</string>
+    <string name="tab_text_1">Keto</string>
+    <string name="tab_text_2">Paleo</string>
+    <string name="tab_text_3">Vegetarian</string>
+    <string name="tab_text_4">Mediterranean</string>
+
+    <!-- Keto Diet Intro Info -->
+    <string name="keto_title">The Ketogenic Diet: A Detailed Beginner\'s Guide to Keto</string>
+    <string name="keto_body">
+        The ketogenic diet (or keto diet, for short) is a low-carb,
+        high-fat diet that offers many health benefits. \n\n
+        Here is a detailed beginner’s guide to the keto diet......
+    </string>
+    <string name="keto_imageURL">https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/04/ketogenic-diet-101-1296x728-feature.jpg?h=1528</string>
+    <string name="keto_url">https://www.healthline.com/nutrition/ketogenic-diet-101</string>
+
+    <!-- Paleo Diet Intro Info -->
+    <string name="paleo_title">The Paleo Diet — A Beginner\'s Guide Plus Meal Plan</string>
+    <string name="paleo_body">
+        The paleo diet is designed to resemble what human hunter-gatherer ancestors ate thousands of years ago,
+        consisting mainly of lean meats, fish, fruits, vegetables, nuts and seeds. \n\n
+        Here is a detailed beginner’s guide to the paleo diet......
+    </string>
+    <string name="paleo_imageURL">https://images-prod.healthline.com/hlcmsresource/images/AN_images/paleo-diet-meal-plan-and-menu-1296x728-feature.jpg</string>
+    <string name="paleo_url">https://www.healthline.com/nutrition/paleo-diet-meal-plan-and-menu</string>
+
+    <!-- Vegetarian Diet Intro Info -->
+    <string name="vegetarian_title">The Vegetarian Diet: A Beginner\'s Guide and Meal Plan</string>
+    <string name="vegetarian_body">
+        Vegetarianism is the practice of following a plant-based diet with or without the inclusion of dairy and eggs. \n\n
+        Switching to a vegetarian diet helps lower cholesterol, control diabetes, prevent cancer, and retain vitamins. \n\n
+        Here is a detailed beginner’s guide to the vegetarian diet......
+    </string>
+    <string name="vegetarian_imageURL">https://images-prod.healthline.com/hlcmsresource/images/AN_images/vegetarian-diet-plan-1296x728-feature.jpg</string>
+    <string name="vegetarian_url">https://www.healthline.com/nutrition/vegetarian-diet-plan</string>
+
+    <!-- Mediterranean Diet Intro Info -->
+    <string name="mediterranean_title">Mediterranean Diet 101: A Meal Plan and Beginner\'s Guide</string>
+    <string name="mediterranean_body">
+        A Mediterranean diet incorporates the traditional healthy living habits of people from countries
+        bordering the Mediterranean Sea, including France, Greece, Italy and Spain. \n\n
+        Here is a detailed beginner’s guide to the Mediterranean diet......
+    </string>
+    <string name="mediterranean_imageURL">https://images-prod.healthline.com/hlcmsresource/images/AN_images/mediterranean-diet-meal-plan-1296x728.jpg</string>
+    <string name="mediterranean_url">https://www.healthline.com/nutrition/mediterranean-diet-meal-plan</string>
+    <string name="title_activity_run_tracker3">Map</string>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "901080731085",
+    "firebase_url": "https://fitspirational.firebaseio.com",
+    "project_id": "fitspirational",
+    "storage_bucket": "fitspirational.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901080731085:android:94eca997a5d4d9f62dc884",
+        "android_client_info": {
+          "package_name": "com.testapp.fitspirational"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901080731085-fn93pe9t1unmp760vg9v1fmmdfet71rh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.testapp.fitspirational",
+            "certificate_hash": "27fcaf8ca037f0214fdf36608aed2542d940f73b"
+          }
+        },
+        {
+          "client_id": "901080731085-3esivcn9b7ghpriuice95jnt40t0719t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxWwOZcwZ2305cukGF31zDLSSP97iQHes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901080731085-3esivcn9b7ghpriuice95jnt40t0719t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

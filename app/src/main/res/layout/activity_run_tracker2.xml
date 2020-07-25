@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/run_tracker_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".FeatureActivities.RunTracker.RunTracker2">
+
+    <LinearLayout
+        android:id="@+id/run_tracker_firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/run_tracker_secondLayout"
+        android:orientation="vertical">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/google_map_run_tracker2"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/run_tracker_secondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true" />
+
+    <!-- Displays -->
+    <LinearLayout
+        android:id="@+id/run_tracker_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/run_tracker_secondLayout"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="138dp">
+
+            <LinearLayout
+                android:id="@+id/run_tracker_distanceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/firstRowMiddle"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Distance (KM)"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#00b51a"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="150dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:background="#fff" />
+
+                <TextView
+                    android:id="@+id/run_tracker_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="0.00"
+                    android:textColor="#fff"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/firstRowMiddle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/run_tracker_timerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignStart="@+id/firstRowMiddle"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Timer"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#00b51a"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="150dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:background="#fff" />
+
+                <Chronometer
+                    android:id="@+id/run_tracker_chronometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:textColor="#fff"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp">
+
+            <LinearLayout
+                android:id="@+id/run_tracker_paceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/secondRowMiddle"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Pace (min/km)"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#00b51a"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="150dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:background="#fff" />
+
+                <TextView
+                    android:id="@+id/run_tracker_pace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="0:00"
+                    android:textColor="#fff"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/secondRowMiddle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/run_tracker_calorieLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignStart="@+id/secondRowMiddle"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Calories (Kcal)"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#00b51a"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="150dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="center"
+                    android:background="#fff" />
+
+                <TextView
+                    android:id="@+id/run_tracker_calorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/agussans"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="0.00"
+                    android:textColor="#fff"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/run_tracker_startStopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Run"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00b51a"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_burred_alt"
+    tools:context=".StartActivities.Register">
+
+    <ImageView
+        android:id="@+id/login_appLogo"
+        android:layout_width="328dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_transparent_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_userNameBox"
+        style="@style/LoginSignUpBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="6dp"
+
+        android:hint="Username"
+        android:textColorHint="#dcdcdc"
+        app:hintTextColor="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_appLogo"
+        app:layout_constraintVertical_bias="0"
+
+        app:startIconDrawable="@drawable/ic_person_black_24dp"
+        app:startIconTint="#ffbb00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_userNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_emailBox"
+        style="@style/LoginSignUpBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="6dp"
+
+        android:hint="Email"
+        android:textColorHint="#dcdcdc"
+        app:hintTextColor="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_userNameBox"
+        app:layout_constraintVertical_bias="0"
+
+        app:startIconDrawable="@drawable/ic_email_black_24dp"
+        app:startIconTint="#ffbb00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_emailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_passwordBox"
+        style="@style/LoginSignUpBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="6dp"
+
+        android:hint="Password"
+        android:textColorHint="#dcdcdc"
+        app:hintTextColor="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_emailBox"
+        app:layout_constraintVertical_bias="0"
+
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#fff"
+        app:startIconDrawable="@drawable/ic_lock_black_24dp"
+        app:startIconTint="#ffbb00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="#fff" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_confirmPasswordBox"
+        style="@style/LoginSignUpBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="6dp"
+
+        android:hint="Confirm Password"
+        android:textColorHint="#dcdcdc"
+        app:hintTextColor="#fff"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_passwordBox"
+        app:layout_constraintVertical_bias="0"
+
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#fff"
+        app:startIconDrawable="@drawable/ic_lock_black_24dp"
+        app:startIconTint="#ffbb00">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_confirmPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="#fff" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/register_nextBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_btn_openapp2"
+
+        android:elevation="6dp"
+
+        android:fontFamily="sans-serif"
+        android:text="next"
+        android:textColor="#063852"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_confirmPasswordBox"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <TextView
+        android:id="@+id/register_loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Already Registered? Login Here."
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_nextBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
