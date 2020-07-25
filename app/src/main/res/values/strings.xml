@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Fitspirational</string>
-    <string name="access_token">pk.eyJ1IjoieGluZ3BlbmciLCJhIjoiY2thOWk2bnBpMGNwazMybXByeHkyYmF3aiJ9.Pyt5dTo1CLVFlogPLk_lIg</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
