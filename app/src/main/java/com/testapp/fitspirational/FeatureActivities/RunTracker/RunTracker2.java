@@ -105,6 +105,7 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run_tracker2);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map_run_tracker2);
         supportMapFragment.getMapAsync(this);
@@ -375,8 +376,10 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
     @Override
     protected void onResume() {
         super.onResume();
-        if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            checkSettingsAndStartLocationUpdates();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                checkSettingsAndStartLocationUpdates();
+            }
         }
     }
 
