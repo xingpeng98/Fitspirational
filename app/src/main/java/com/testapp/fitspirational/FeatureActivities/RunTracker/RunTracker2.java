@@ -388,5 +388,4 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
         super.onDestroy();
         stopLocationUpdates();
     }
-
 }
