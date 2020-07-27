@@ -25,6 +25,7 @@ import com.testapp.fitspirational.FeatureActivities.Breathe.Breathe;
 import com.testapp.fitspirational.FeatureActivities.CalorieTracker.CalorieMainPage;
 import com.testapp.fitspirational.FeatureActivities.Diet.Diet;
 import com.testapp.fitspirational.FeatureActivities.Fitness.GeneralFitness;
+import com.testapp.fitspirational.FeatureActivities.RunTracker.GPSTracker.GpsTracker;
 import com.testapp.fitspirational.FeatureActivities.RunTracker.RunHistory;
 import com.testapp.fitspirational.FeatureActivities.RunTracker.RunMainPage;
 import com.testapp.fitspirational.Executors.FitnessContentExecutor;
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     startActivity(new Intent(getApplicationContext(), Diet.class));
                     break;
                 case 4: //GPS Tracker
-                    startActivity(new Intent(getApplicationContext(), RunTracker2.class));
+                    startActivity(new Intent(getApplicationContext(), GpsTracker.class));
                     break;
                 case 5: //Run Tracker Main Page
                     startActivity(new Intent(getApplicationContext(), RunMainPage.class));

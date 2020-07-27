@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
@@ -68,6 +69,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback {
 
     private int LOCATION_REQUEST_CODE = 10001;
@@ -105,6 +107,7 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run_tracker2);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map_run_tracker2);
         supportMapFragment.getMapAsync(this);
@@ -143,9 +146,6 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
                 running = true;
                 runDate = CurrentDate.getCurrentDatetime();
                 startStopBtn.setText(R.string.EndRun);
-                if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                    checkSettingsAndStartLocationUpdates();
-                }
             } else {
                 //End location and run stats updates
                 locationStatsUpdater.end();
@@ -268,12 +268,14 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
 
     }
 
+
     @SuppressLint("MissingPermission")
     private void startLocationUpdates() {
         map.setMyLocationEnabled(true);
         //fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
         fusedLocationProviderClient.requestLocationUpdates(locationRequest, getPendingIntent());
     }
+
 
     //for background updates
     private PendingIntent getPendingIntent() {
@@ -317,7 +319,6 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
     private void stopLocationUpdates() {
         fusedLocationProviderClient.removeLocationUpdates(getPendingIntent());
     }
-
 
     /* -----------  Permissions  ------------*/
     private void askLocationPermission() {
@@ -375,8 +376,10 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
     @Override
     protected void onResume() {
         super.onResume();
-        if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            checkSettingsAndStartLocationUpdates();
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                checkSettingsAndStartLocationUpdates();
+            }
         }
     }
 
@@ -385,4 +388,5 @@ public class RunTracker2 extends AppCompatActivity implements OnMapReadyCallback
         super.onDestroy();
         stopLocationUpdates();
     }
+
 }

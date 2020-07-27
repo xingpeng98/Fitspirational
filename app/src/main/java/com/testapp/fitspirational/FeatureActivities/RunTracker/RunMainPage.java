@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.testapp.fitspirational.FeatureActivities.RunTracker.GPSTracker.GpsTracker;
 import com.testapp.fitspirational.MainActivity;
 import com.testapp.fitspirational.NavigationBarActivities.Credits;
 import com.testapp.fitspirational.NavigationBarActivities.Settings;
@@ -57,7 +58,7 @@ public class RunMainPage extends AppCompatActivity implements NavigationView.OnN
         /*---------------------- Start Run Card -------------------------*/
         startRun = findViewById(R.id.run_main_letsRunCard);
         startRun.setOnClickListener((v) -> {
-            startActivity(new Intent(getApplicationContext(), RunTracker2.class));
+            startActivity(new Intent(getApplicationContext(), GpsTracker.class));
         });
 
         /*---------------------- Run History Card -------------------------*/

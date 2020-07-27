@@ -3,13 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.testapp.fitspirational">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -20,8 +17,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <receiver
-            android:name=".FeatureActivities.RunTracker.MyLocationService"/>
+        <service
+            android:name=".FeatureActivities.RunTracker.GPSTracker.MyLocService"/>
+        <activity android:name=".FeatureActivities.RunTracker.GPSTracker.GpsTracker"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+
+        <receiver android:name=".FeatureActivities.RunTracker.MyLocationService" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
