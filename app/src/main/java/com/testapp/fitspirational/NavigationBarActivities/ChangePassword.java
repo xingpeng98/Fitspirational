@@ -1,5 +1,6 @@
 package com.testapp.fitspirational.NavigationBarActivities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
@@ -10,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -73,12 +78,33 @@ public class ChangePassword extends AppCompatActivity {
                 return;
             }
 
-            firebaseUser.updatePassword(newPwStr);
-            updateDataBase(newPwStr);
+            String email = firebaseUser.getEmail();
+            AuthCredential credential = EmailAuthProvider
+                    .getCredential(email, oldPwStr);
+            firebaseUser.reauthenticate(credential)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            firebaseUser.updatePassword(newPwStr).addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()) {
+                                    updateDataBase(newPwStr);
+                                    Log.d(TAG, "Password updated");
+                                    Toast.makeText(this, "Password updated", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Log.d(TAG, "Error password not updated");
+                                }
+                            });
+                        } else {
+                            Log.d(TAG, "Error auth failed");
+                        }
+                    });
+
+            //updateDataBase(newPwStr);
+
+            Toast.makeText(this, "Please Wait", Toast.LENGTH_SHORT).show();
 
             SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putString("remember", "true");
+            editor.putString("remember", "false");
             editor.apply();
         });
 
@@ -93,7 +119,7 @@ public class ChangePassword extends AppCompatActivity {
             return null;
         }).addOnSuccessListener(aVoid -> {
             Log.d(TAG, "Transaction success!");
-            Toast.makeText(getApplicationContext(),"Successfully changed password", Toast.LENGTH_LONG).show();
+            finish();
         }).addOnFailureListener(e -> {
             Log.w(TAG, "Transaction failure.", e);
             Toast.makeText(getApplicationContext(),"Failed to Update: " + e.getMessage(), Toast.LENGTH_LONG).show();
